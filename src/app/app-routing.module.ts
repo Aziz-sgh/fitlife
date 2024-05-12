@@ -10,6 +10,8 @@ import { AdminComponent } from './admin/admin.component';
 import { UsersComponent } from './users/users.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { StoreComponent } from './store/store.component';
+import { AddoffreComponent } from './addoffre/addoffre.component';
+import { EntraineurComponent } from './entraineur/entraineur.component';
 
 const routes: Routes = [
   {path:"registre",component:RegistreComponent},
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path:"admin",component:AdminComponent},
   {path:"users",component:UsersComponent},
   {path:"addproduct",component:AddProductComponent},
-  {path:"store",component:StoreComponent}
+  {path:"store",component:StoreComponent},
+  {path:"addoffre",component:AddoffreComponent},
+  {path:"entraineur",component:EntraineurComponent}
 
 ];
 

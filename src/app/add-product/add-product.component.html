@@ -28,7 +28,7 @@
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
-                            Pages
+                            Users managment
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
@@ -37,62 +37,19 @@
                             <li class="sidebar-item">
                                 <a href="/users" class="sidebar-link">users</a>
                             </li>
+                            <li class="sidebar-item">
+                                <a href="/addoffre" class="sidebar-link">add offre</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                            shop
+                            product managment
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Add product</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Post 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
-                            Auth
-                        </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Login</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Register</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Forgot Password</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-header">
-                        Multi Level Menu
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
-                            Multi Dropdown
-                        </a>
-                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
-                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.1</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.2</a>
-                                    </li>
-                                </ul>
+                                <a href="/addproduct" class="sidebar-link">add product </a>
                             </li>
                         </ul>
                     </li>
@@ -132,7 +89,7 @@
                                         <div class="col-6">
                                             <div class="p-3 m-1">
                                                 <h4>Welcome Back, Admin</h4>
-                                                <p class="mb-0">Admin Dashboard, CodzSword</p>
+                                                <p class="mb-0">Admin Dashboard, </p>
                                             </div>
                                         </div>
                                         <div class="col-6 align-self-end text-end">
@@ -169,44 +126,56 @@
                         </div>
                     </div>
                     <!--add product-->
-                    <div class="container">
-                        <h2 class="mb-4">Add Product</h2>
-                        <form>
-                            <div class="mb-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        Add Product
+                      </button>
+                    <br><br>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
                                 <label for="productName" class="form-label">Product Name</label>
                                 <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
-                            </div>
-                            <div class="mb-3">
+                                </div>
+                                <div class="mb-3">
                                 <label for="productPrice" class="form-label">Price</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input type="number" class="form-control" id="productPrice" placeholder="Enter price" required>
                                 </div>
-                            </div>
-                            <div class="mb-3">
+                                </div>
+                                <div class="mb-3">
                                 <label for="productDescription" class="form-label">Description</label>
                                 <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" required></textarea>
-                            </div>
-                            <div class="mb-3">
+                                </div>
+                                <div class="mb-3">
                                 <label for="productImage" class="form-label">Image URL</label>
                                 <input type="url" class="form-control" id="productImage" placeholder="Enter image URL" required>
+                                </div>
+                            </form>
                             </div>
-                            <button type="submit" class="btn btn-primary">Add Product</button>
-                        </form>
-                    </div>
-                    
-                    <br><br>
-                    
-
-
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Add Product</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div> 
                     <!-- Table Element -->
                     <div class="card border-0">
                         <div class="card-header">
                             <h5 class="card-title">
-                                Users
+                                products
                             </h5>
                             <h6 class="card-subtitle text-muted">
-                                Lorem 
+                                 
                             </h6>
                         </div>
                         <div class="card-body">
@@ -224,18 +193,18 @@
                                         <th scope="row">1</th>
                                         <td>Mark</td>
                                         <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>mdo</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Jacob</td>
                                         <td>Thornton</td>
-                                        <td>@fat</td>
+                                        <td>fat</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
+                                        <td>twitter</td>
                                     </tr>
                                 </tbody>
                             </table>

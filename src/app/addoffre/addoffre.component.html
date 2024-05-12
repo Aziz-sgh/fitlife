@@ -89,6 +89,7 @@
                                         <div class="col-6">
                                             <div class="p-3 m-1">
                                                 <h4>Welcome Back, Admin</h4>
+                                                <p class="mb-0">Admin Dashboard, </p>
                                             </div>
                                         </div>
                                         <div class="col-6 align-self-end text-end">
@@ -124,17 +125,53 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ajouterModal">Ajouter</button>
+                    <!--add product-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        Add offre
+                      </button>
                     <br><br>
+                    <!-- Modal -->
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="addProductModalLabel">Add offfre</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                <label for="productName" class="form-label">Offre</label>
+                                <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+                                </div>
+                                <div class="mb-3">
+                                <label for="productPrice" class="form-label">Price</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="productPrice" placeholder="Enter price" required>
+                                </div>
+                                </div>
+                                <div class="mb-3">
+                                <label for="productDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" required></textarea>
+                                </div>
+                            </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Add offre</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div> 
                     <!-- Table Element -->
                     <div class="card border-0">
                         <div class="card-header">
                             <h5 class="card-title">
-                                coach
+                                products
                             </h5>
                             <h6 class="card-subtitle text-muted">
-                                coach information
-
+                                 
                             </h6>
                         </div>
                         <div class="card-body">
@@ -142,10 +179,11 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">mail</th>
-                                        <th scope="col">phone numbre</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modifierModal">Modifier</button></td>   
+                                        <td><button type="button" class="btn btn-danger">Supprimer</button></td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -154,7 +192,6 @@
                                         <td>Mark</td>
                                         <td>Otto</td>
                                         <td>mdo</td>
-                                        <td>65465464</td>
                                         <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modifierModal">Modifier</button></td>   
                                         <td><button type="button" class="btn btn-danger">Supprimer</button></td>
                                     </tr>
@@ -163,18 +200,13 @@
                                         <td>Jacob</td>
                                         <td>Thornton</td>
                                         <td>fat</td>
-                                        <td>9546454</td>
-                                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modifierModal">Modifier</button></td>  
+                                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modifierModal">Modifier</button></td>   
                                         <td><button type="button" class="btn btn-danger">Supprimer</button></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>fat</td>
-                                        <td>6446848464</td>
-                                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modifierModal">Modifier</button></td>
-                                        <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+                                        <th scope="row">3</th>
+                                        <td colspan="2">Larry the Bird</td>
+                                        <td>twitter</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -192,7 +224,7 @@
                         <div class="col-6 text-start">
                             <p class="mb-0">
                                 <a href="#" class="text-muted">
-                                    <strong>CodzSwod</strong>
+                                    <strong>FitZone</strong>
                                 </a>
                             </p>
                         </div>
@@ -219,84 +251,4 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-
-
-<div class="modal fade" id="ajouterModal" tabindex="-1" aria-labelledby="ajouterModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ajouterModalLabel">Ajouter </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Ajouter Membre Form -->
-                <form>
-                    <div class="mb-3">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" name="lastName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- Modifier Modal -->
-<div class="modal fade" id="modifierModal" tabindex="-1" aria-labelledby="modifierModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modifierModalLabel">Modifier </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Modifier Membre Form -->
-                <form>
-                    <div class="mb-3">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" name="lastName" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 </body>
-
-
