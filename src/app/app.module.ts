@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { StoreComponent } from './store/store.component';
 import { AddoffreComponent } from './addoffre/addoffre.component';
 import { EntraineurComponent } from './entraineur/entraineur.component';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +34,12 @@ import { EntraineurComponent } from './entraineur/entraineur.component';
     AddProductComponent,
     StoreComponent,
     AddoffreComponent,
-    EntraineurComponent
+    EntraineurComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule, // Add FormsModule here
     AppRoutingModule
   ],
   providers: [],

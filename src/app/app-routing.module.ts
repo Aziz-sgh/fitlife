@@ -12,6 +12,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { StoreComponent } from './store/store.component';
 import { AddoffreComponent } from './addoffre/addoffre.component';
 import { EntraineurComponent } from './entraineur/entraineur.component';
+import { PanierComponent } from './panier/panier.component';
 
 const routes: Routes = [
   {path:"registre",component:RegistreComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"addproduct",component:AddProductComponent},
   {path:"store",component:StoreComponent},
   {path:"addoffre",component:AddoffreComponent},
-  {path:"entraineur",component:EntraineurComponent}
+  {path:"entraineur",component:EntraineurComponent},
+  {path:"panier",component:PanierComponent}
 
 ];
 
